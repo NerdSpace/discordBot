@@ -6,5 +6,11 @@ You can feel free to change everything, but it would be nice when you give me so
 1. Go to the BotToken.java and paste your bot token
 2. Go to the STATIC.java and edit it
 
+
+
+Feel free to leave some feedback or commit a pull request.
+
+
+
 [Guild](https://discord.gg/DMEEChw)
 
