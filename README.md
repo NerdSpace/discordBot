@@ -10,6 +10,8 @@ You can feel free to change everything, but it would be nice when you give me so
 
 Feel free to leave some feedback or commit a pull request.
 
+If you need help with the code or found a bug, please contact me.
+
 
 
 [Guild](https://discord.gg/DMEEChw)
