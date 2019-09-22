@@ -14,5 +14,5 @@ If you need help with the code or found a bug, please contact me.
 
 
 
-[Guild](https://discord.gg/DMEEChw)
+[Guild](https://discord.gg/DMEEChw) [Web](https://nicss.de)
 
