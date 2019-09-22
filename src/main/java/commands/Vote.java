@@ -208,7 +208,7 @@ public class Vote implements Command, Serializable {
 
     @Override
     public void action(String[] agrs, MessageReceivedEvent event) {
-        if(permsCore.check(event)) return;
+
 
 
             channel = event.getTextChannel();
@@ -221,6 +221,7 @@ public class Vote implements Command, Serializable {
             switch (agrs[0]) {
 
                 case "create":
+                    if(permsCore.check(event)) return;
                     createPoll(agrs, event);
                     break;
 
@@ -229,10 +230,12 @@ public class Vote implements Command, Serializable {
                     break;
 
                 case "stats":
+                    if(permsCore.check(event)) return;
                     voteStats(event);
                     break;
 
                 case "close":
+                    if(permsCore.check(event)) return;
                     closeVote(event);
                     break;
             }
