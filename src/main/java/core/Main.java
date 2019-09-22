@@ -44,7 +44,6 @@ public class Main {
         commandHandler.commands.put("wumpus", new cmdWumpus());
         commandHandler.commands.put("invite", new cmdInvite());
         commandHandler.commands.put("adminhelp", new cmdAdminHelp());
-        commandHandler.commands.put("say", new cmdSay());
         commandHandler.commands.put("clear", new cmdClear());
         commandHandler.commands.put("vote", new Vote());
         commandHandler.commands.put("dev", new cmdDev());
