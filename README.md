@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/36592bed9bc44c02a7aadf2ff4e31c74)](https://www.codacy.com/manual/shzmu/discordBot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=shzmu/discordBot&amp;utm_campaign=Badge_Grade)
 # discordBot
 
 This is my discord bot for the nerd space guild.
