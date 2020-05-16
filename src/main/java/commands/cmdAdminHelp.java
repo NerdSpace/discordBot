@@ -1,7 +1,7 @@
 package commands;
 
-import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import core.permsCore;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class cmdAdminHelp implements Command {
     @Override
@@ -12,8 +12,7 @@ public class cmdAdminHelp implements Command {
     @Override
     public void action(String[] agrs, MessageReceivedEvent event) {
 
-        if(permsCore.check(event))
-            return;
+        if(permsCore.check(event)) { return; }
 
         event.getTextChannel().sendMessage("The magic command was executed!").queue();
 

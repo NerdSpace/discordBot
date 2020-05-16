@@ -1,24 +1,26 @@
 package core;
 
-import net.dv8tion.jda.api.entities.Role;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import util.STATIC;
 
-import java.util.Arrays;
+import java.awt.*;
 
 public class permsCore {
 
     public static boolean check(MessageReceivedEvent event) {
 
-        for( Role r : event.getGuild().getMember(event.getAuthor()).getRoles()) {
-
-            if(Arrays.stream(STATIC.PERMS).parallel().anyMatch(r.getName()::contains))
+            if(event.getGuild().getMember(event.getAuthor()).isOwner())
                 return false;
-            else
-                event.getTextChannel().sendMessage(":warning: Sorry, " + event.getAuthor().getAsMention() + ", you don't have the permission to use command!").queue();
-        }
+            else {
+                EmbedBuilder eb = new EmbedBuilder();
 
-        return true;
+                eb.setDescription(":warning: Sorry, " + event.getAuthor().getAsMention() + ", you don't have the permission to use command!");
+
+                eb.setColor(Color.PINK);
+
+                event.getTextChannel().sendMessage(eb.build()).queue();
+                return true;
+            }
     }
 
 }

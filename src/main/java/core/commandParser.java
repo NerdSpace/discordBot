@@ -1,7 +1,6 @@
 package core;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import util.STATIC;
 
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public class commandParser {
             this.raw = rw;
             this.beheaded = beheaded;
             this.splitBeheaded = splitBeheaded;
-            this.invoke = invoke;
+            this.invoke = invoke.toLowerCase();
             this.args = args;
             this.event = event;
         }

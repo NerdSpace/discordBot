@@ -1,9 +1,9 @@
 package listeners;
 
+import core.commandHandler;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import util.STATIC;
-import core.*;
 
 import java.io.IOException;
 import java.text.ParseException;

@@ -17,8 +17,8 @@ public class cmdDev implements Command {
     public void action(String[] agrs, MessageReceivedEvent event) throws ParseException, IOException {
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.setTitle("**Developer**", "https://twitter.com/ExceptionAPI");
-        eb.setDescription("This bot was developed by **ExceptionAPI**");
+        eb.setTitle("**Developer**", "https://github.com/nerdspace");
+        eb.setDescription("This bot was developed by the **NerdSpace Community** \n Founder of this *'organization'* is StackNeverFlow");
 
         eb.setThumbnail("https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png");
 

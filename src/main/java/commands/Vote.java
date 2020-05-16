@@ -210,7 +210,6 @@ public class Vote implements Command, Serializable {
     public void action(String[] agrs, MessageReceivedEvent event) {
 
 
-
             channel = event.getTextChannel();
 
             if (agrs.length < 1) {
@@ -261,6 +260,6 @@ public class Vote implements Command, Serializable {
 
     @Override
     public String help() {
-        return null;
+        return "**Please use `-vote v <number>` **";
     }
 }

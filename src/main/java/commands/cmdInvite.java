@@ -21,7 +21,7 @@ public class cmdInvite implements Command {
 
 
         eb.setThumbnail("https://d.newsweek.com/en/full/1323071/discord-furry-moderator-abuse-image-quackityhd.png?w=1600&h=1600&q=88&f=f1df672f2c3eeb15e90ecebda32f6c6c");
-        eb.addField("https://discord.gg/DMEEChw", "Das ist der Discord Invite Link zu diesem Server" ,true);
+        eb.addField("https://discord.gg/UZ8TbQf", "Das ist der Discord Invite Link zu diesem Server" ,true);
 
         event.getTextChannel().sendMessage(eb.build()).queue();
     }

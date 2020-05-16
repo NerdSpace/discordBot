@@ -17,7 +17,7 @@ public class cmdWumpus implements Command {
     public void action(String[] agrs, MessageReceivedEvent event) {
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.setImage("https://tenor.com/view/wumpus-sunglasses-gif-13250930");
+        eb.setImage("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDRGySzSUQAUk3de.jpg&f=1&nofb=1");
 
         eb.setTitle("Wumpus", "https://tenor.com/view/wumpus-sunglasses-gif-13250930");
 

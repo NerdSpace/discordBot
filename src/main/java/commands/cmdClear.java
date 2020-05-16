@@ -64,7 +64,7 @@ public class cmdClear implements Command {
                     public void run() {
                         msg.delete().queue();
                     }
-                }, 5000);
+                }, 7500);
 
             } catch (Exception e) {
                 e.printStackTrace();

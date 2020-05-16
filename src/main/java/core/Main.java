@@ -1,8 +1,7 @@
 package core;
 
 import commands.*;
-import listeners.commandListener;
-import listeners.readyListener;
+import listeners.*;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -14,7 +13,7 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
 
-    static JDABuilder builder;
+    public static JDABuilder builder;
 
     public static void main(String[] Args) {
 
@@ -26,13 +25,15 @@ public class Main {
         builder.setStatus(OnlineStatus.ONLINE);
         builder.setActivity(Activity.listening("to you in #spam"));
 
-        addListeners();
         addCommands();
+        addListeners();
+
 
         // start of the discord bot
 
         try {
             JDA jda = builder.build();
+            jda.addEventListener(new Reaction_Listener());
         } catch (LoginException e) {
             e.printStackTrace();
         }
@@ -41,12 +42,17 @@ public class Main {
 
     public static void addCommands() {
 
-        commandHandler.commands.put("wumpus", new cmdWumpus());
-        commandHandler.commands.put("invite", new cmdInvite());
-        commandHandler.commands.put("adminhelp", new cmdAdminHelp());
-        commandHandler.commands.put("clear", new cmdClear());
-        commandHandler.commands.put("vote", new Vote());
-        commandHandler.commands.put("dev", new cmdDev());
+        commandHandler.commands.put("wumpus".toLowerCase(), new cmdWumpus());
+        commandHandler.commands.put("invite".toLowerCase(), new cmdInvite());
+        commandHandler.commands.put("adminhelp".toLowerCase(), new cmdAdminHelp());
+        commandHandler.commands.put("clear".toLowerCase(), new cmdClear());
+        commandHandler.commands.put("vote".toLowerCase(), new Vote());
+        commandHandler.commands.put("dev".toLowerCase(), new cmdDev());
+        commandHandler.commands.put("help".toLowerCase(), new Help_Command());
+        commandHandler.commands.put("mute".toLowerCase(), new Mute_Command());
+        commandHandler.commands.put("meme".toLowerCase(), new Meme_Command());
+
+        System.out.println("[INFO] Commands has been registerd");
 
     }
 
@@ -54,8 +60,12 @@ public class Main {
 
         builder.addEventListeners(new commandListener());
         builder.addEventListeners(new readyListener());
+        builder.addEventListeners(new GuildMessageReceived_Hi_Listener());
+        builder.addEventListeners(new Join_Event());
+        builder.addEventListeners(new Reaction_Listener());
+
+        System.out.println("[INFO] Listener has been registerd");
 
     }
-
 
 }
