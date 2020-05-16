@@ -7,6 +7,5 @@ public class STATIC {
     public static final String prefix = "-";
 
     public static final String PERMS = "Admin";
-    public static final String[] Test = {"test"};
 
 }
