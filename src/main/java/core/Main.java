@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import util.BotToken;
+import util.MySQL;
 
 import javax.security.auth.login.LoginException;
 
@@ -34,9 +35,12 @@ public class Main {
         try {
             JDA jda = builder.build();
             jda.addEventListener(new Reaction_Listener());
+            MySQL.connect();
         } catch (LoginException e) {
             e.printStackTrace();
         }
+
+        MySQL.createTable();
 
     }
 
@@ -46,7 +50,7 @@ public class Main {
         commandHandler.commands.put("invite".toLowerCase(), new cmdInvite());
         commandHandler.commands.put("adminhelp".toLowerCase(), new cmdAdminHelp());
         commandHandler.commands.put("clear".toLowerCase(), new cmdClear());
-        commandHandler.commands.put("vote".toLowerCase(), new Vote());
+        commandHandler.commands.put("vote".toLowerCase(), new Vote_Command());
         commandHandler.commands.put("dev".toLowerCase(), new cmdDev());
         commandHandler.commands.put("help".toLowerCase(), new Help_Command());
         commandHandler.commands.put("mute".toLowerCase(), new Mute_Command());
@@ -63,6 +67,7 @@ public class Main {
         builder.addEventListeners(new GuildMessageReceived_Hi_Listener());
         builder.addEventListeners(new Join_Event());
         builder.addEventListeners(new Reaction_Listener());
+        builder.addEventListeners(new CTF_Apply_Reaction_Listener());
 
         System.out.println("[INFO] Listener has been registerd");
 

@@ -27,7 +27,7 @@ public class Meme_Command implements Command {
         String subreddit = "";
 
         try {
-            URL memeURL = new URL("https://meme-api.herokuapp.com/gimme");
+            URL memeURL = new URL("https://meme-api.herokuapp.com/gimme/ProgrammerHumor");
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(memeURL.openConnection().getInputStream()));
 
             String lines;

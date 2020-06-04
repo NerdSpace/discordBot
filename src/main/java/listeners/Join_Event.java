@@ -1,5 +1,6 @@
 package listeners;
 
+import handlers.MySQL_Handler;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
@@ -21,6 +22,8 @@ public class Join_Event extends ListenerAdapter {
             guild.getTextChannelsByName("┃welcome", true);
             event.getGuild().modifyMemberRoles(event.getMember(), event.getGuild().getRolesByName("Member", true)).complete();
 
+            MySQL_Handler.createEntry(event.getUser().getId());
+
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
@@ -38,7 +41,8 @@ public class Join_Event extends ListenerAdapter {
                 "Swoooosh. {member} just landed.",
                 "Brace yourselves. {member} just joined the server.",
                 "A wild {member} appeared.",
-                "{member} did you bring popcorn?"
+                "{member} did you bring popcorn?",
+                "Wakeup! {member} is joined!"
         };
 
         Random random = new Random();

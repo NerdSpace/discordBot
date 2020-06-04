@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Vote implements Command, Serializable {
+public class Vote_Command implements Command, Serializable {
 
     private static TextChannel channel;
 

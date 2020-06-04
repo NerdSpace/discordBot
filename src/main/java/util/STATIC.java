@@ -6,6 +6,11 @@ public class STATIC {
 
     public static final String prefix = "-";
 
+    public static final String DB_IP = "";
+    public static final String DB_USER = "";
+    public static final String DB_PWD = "";
+    public static final String DB_NAME = "";
+
     public static final String PERMS = "Admin";
     public static final String[] Test = {"test"};
 

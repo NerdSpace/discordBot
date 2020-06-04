@@ -19,7 +19,7 @@ public class Help_Command implements Command {
         eb.setTitle("Help");
 
         eb.setDescription("**-invite** ┃ Get the invite link to the server" + "\n" +
-                "**-vote** ┃ Vote for a poll" + "\n" +
+                "**-vote** ┃ Vote_Command for a poll" + "\n" +
                 "**-meme** ┃ See a funny meme" + "\n" +
                 "**-dev** ┃ Show information about this bot/ developers");
 
