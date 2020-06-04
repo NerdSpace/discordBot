@@ -12,6 +12,5 @@ public class STATIC {
     public static final String DB_NAME = "";
 
     public static final String PERMS = "Admin";
-    public static final String[] Test = {"test"};
 
 }
